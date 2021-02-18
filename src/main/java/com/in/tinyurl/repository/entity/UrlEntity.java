@@ -1,27 +1,29 @@
-package com.in.tinyurl.repository;
+package com.in.tinyurl.repository.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "url")
-public class Url {
+public class UrlEntity {
     /*@Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)*/
     @Id
     private String tinyUrl;
     private String url;
-    private Date creationDate;
+    private LocalDateTime creationDate;
+    private LocalDateTime expirationDate;
 
-    public Url() {
+    public UrlEntity() {
     }
 
-    public Url(String tinyUrl, String url, Date creationDate) {
+    public UrlEntity(String tinyUrl, String url, LocalDateTime creationDate, LocalDateTime expirationDate) {
         this.tinyUrl = tinyUrl;
         this.url = url;
         this.creationDate = creationDate;
+        this.expirationDate = expirationDate;
     }
 
 
@@ -41,11 +43,19 @@ public class Url {
         this.url = url;
     }
 
-    public Date getCreationDate() {
+    public LocalDateTime getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(LocalDateTime creationDate) {
         this.creationDate = creationDate;
+    }
+
+    public LocalDateTime getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(LocalDateTime expirationDate) {
+        this.expirationDate = expirationDate;
     }
 }

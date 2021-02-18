@@ -11,4 +11,4 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-base-url: "http://localhost:${spring.tomcat.port}/"
+base-url: "http://localhost:${spring.tomcat.port}/" #Base url will of web server from which you want provide redirection.

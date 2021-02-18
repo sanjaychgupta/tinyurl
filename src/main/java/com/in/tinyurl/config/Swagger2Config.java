@@ -22,8 +22,8 @@ public class Swagger2Config {
                 .build().apiInfo(apiEndPointsInfo());
     }
     private ApiInfo apiEndPointsInfo() {
-        return new ApiInfoBuilder().title("Spring Boot REST API")
-                .description("Employee Management REST API")
+        return new ApiInfoBuilder().title("TINY URL BACKEND SERVICE")
+                .description("TinyURL is a URL shortening web service, which provides short aliases for redirection of long URLs.")
                 .contact(new Contact("Sanjay Gupta", "http://localhost:8080", "sanjay.ch.gupta@gmail.com"))
                 .license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
